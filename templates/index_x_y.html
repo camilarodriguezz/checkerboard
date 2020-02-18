@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Checkboard</h1>
+        {% for x in range (0,rows): %}
+        {%if x % 2 == 0:%}
+        <div class="row">
+            {% for y in range (0,columns): %}
+            {%if y % 2 == 0:%}
+            <div style="background-color: {{col1}};" class=" column dark"></div>
+            {% endif %}
+            {%if y % 2 == 1:%}
+            <div style="background-color: {{col2}};" class=" column light"></div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {%if x % 2 == 1:%}
+        <div class="row">
+            {% for y in range (0,columns): %}
+            {%if y % 2 == 1:%}
+            <div style="background-color: {{col1}};" class=" column dark"></div>
+            {% endif %}
+            {%if y % 2 == 0:%}
+            <div style="background-color: {{col2}};" class=" column light"></div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 1024px;
+    padding-top: 100px;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.row {
+    display: block;
+}
+
+.column {
+    display: inline-block;
+}
+
+.container div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.dark {
+    background-color: black;
+}
+
+.light {
+    background-color: brown;
+}
